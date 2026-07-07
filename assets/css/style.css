@@ -74,6 +74,14 @@ main {
   z-index: 0;
 }
 
+/* OGL sizes the canvas with inline px styles from clientWidth, which iOS Safari
+   can measure short during address-bar layout, leaving a gap. Force full fill. */
+#threads canvas {
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
